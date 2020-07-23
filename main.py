@@ -4,12 +4,12 @@ from spider import Spider
 from domain import *
 from general import *
 
-PROJECT_NAME = 'myntra'
-HOMEPAGE = 'https://www.myntra.com/'
+PROJECT_NAME = input('Enter project name:')
+HOMEPAGE = input('Enter project homepage:')
 DOMAIN_NAME = get_domain_name(HOMEPAGE)
 QUEUE_FILE = PROJECT_NAME + '/queue.txt'
 CRAWLED_FILE = PROJECT_NAME + '/crawled.txt'
-NUMBER_OF_THREADS = 8 
+NUMBER_OF_THREADS = input('Enter number of spiders:') 
 queue = Queue()
 Spider(PROJECT_NAME, HOMEPAGE, DOMAIN_NAME)
 
